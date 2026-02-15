@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/Parking_Lot_System/pom.xml" />
+        <option value="$PROJECT_DIR$/Rate_limiter/pom.xml" />
       </list>
     </option>
   </component>
