@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Parking_Lot_System" />
         <module name="Rate_limiter" />
+        <module name="LRU_Cache" />
       </profile>
     </annotationProcessing>
   </component>

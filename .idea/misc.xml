@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/Parking_Lot_System/pom.xml" />
         <option value="$PROJECT_DIR$/Rate_limiter/pom.xml" />
+        <option value="$PROJECT_DIR$/LRU_Cache/pom.xml" />
       </list>
     </option>
   </component>
