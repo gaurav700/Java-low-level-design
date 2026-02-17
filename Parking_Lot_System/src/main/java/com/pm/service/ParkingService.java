@@ -3,53 +3,83 @@ package com.pm.service;
 import com.pm.entity.*;
 import com.pm.strategy.FloorSelectionStrategy;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 public class ParkingService {
 
     private final ParkingLot lot;
     private final FloorSelectionStrategy strategy;
+    private final TicketService ticketService;
+    private final ReentrantLock lock = new ReentrantLock();
 
     public ParkingService(ParkingLot lot,
-                          FloorSelectionStrategy strategy) {
+                          FloorSelectionStrategy strategy, TicketService ticketService) {
         this.lot = lot;
         this.strategy = strategy;
+        this.ticketService = ticketService;
     }
 
-    public ParkingSpot park(Vehicle vehicle) {
+    public Ticket park(Vehicle vehicle) {
+        lock.lock();
+        try {
 
-        if (lot.isVehicleParked(vehicle.getRegistrationNumber())) {
-            throw new IllegalStateException("Already parked");
+            if (lot.isVehicleParked(vehicle.getRegistrationNumber())) {
+                throw new IllegalStateException("Already parked");
+            }
+
+            Floor floor = strategy.selectFloor(lot, vehicle);
+            if (floor == null) {
+                throw new IllegalStateException("Parking Full");
+            }
+
+            ParkingSpot spot =
+                    floor.getAvailableSpot(vehicle.getVehicleType());
+
+            spot.parkVehicle(vehicle);
+
+            lot.addOccupied(vehicle.getRegistrationNumber(), spot);
+
+            lot.refreshHeap(floor, vehicle.getVehicleType());
+
+            Ticket ticket = ticketService.parkingTicket(vehicle.getRegistrationNumber(), spot.getSpotNumber());
+
+            return ticket;
         }
-
-        Floor floor = strategy.selectFloor(lot, vehicle);
-        if (floor == null) {
-            throw new IllegalStateException("Parking Full");
+        finally {
+            lock.unlock();
         }
-
-        ParkingSpot spot =
-                floor.getAvailableSpot(vehicle.getVehicleType());
-
-        spot.parkVehicle(vehicle);
-
-        lot.addOccupied(vehicle.getRegistrationNumber(), spot);
-
-        lot.refreshHeap(floor, vehicle.getVehicleType());
-
-        return spot;
     }
 
-    public void leave(String reg) {
+    public Ticket leave(String ticketId) {
 
-        ParkingSpot spot = lot.getOccupied(reg);
-        if (spot == null) {
-            throw new IllegalStateException("Not parked");
+        lock.lock();
+        try {
+
+
+            Ticket ticket = ticketService.leaveTicket(ticketId);
+
+            String reg = ticket.getRegistrationNumber();
+
+
+            ParkingSpot spot = lot.getOccupied(reg);
+
+            if (spot == null) {
+                throw new IllegalStateException("Vehicle not parked");
+            }
+
+            Floor floor = spot.getFloor();
+
+            spot.removeVehicle();
+            floor.releaseSpot(spot);
+
+            lot.removeOccupied(reg);
+            lot.refreshHeap(floor, spot.getSpotType());
+
+            return ticket;
         }
-
-        Floor floor = spot.getFloor();
-
-        spot.removeVehicle();
-        floor.releaseSpot(spot);
-
-        lot.removeOccupied(reg);
-        lot.refreshHeap(floor, spot.getSpotType());
+        finally {
+            lock.unlock();
+        }
     }
+
 }

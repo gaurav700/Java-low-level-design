@@ -38,4 +38,8 @@ public class ParkingSpot {
     public Floor getFloor() {
         return floor;
     }
+
+    public String getSpotNumber() {
+        return spotNumber;
+    }
 }

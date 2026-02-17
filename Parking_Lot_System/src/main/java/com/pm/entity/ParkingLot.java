@@ -3,18 +3,19 @@ package com.pm.entity;
 import com.pm.enums.VehicleType;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ParkingLot {
 
     private final Map<Integer, Floor> floors;
-    private final Map<String, ParkingSpot> occupiedMap;
+    private final ConcurrentHashMap<String, ParkingSpot> occupiedMap;
 
     private final Map<VehicleType, PriorityQueue<Floor>> floorHeaps;
 
     public ParkingLot() {
 
         this.floors = new HashMap<>();
-        this.occupiedMap = new HashMap<>();
+        this.occupiedMap = new ConcurrentHashMap<>();
         this.floorHeaps = new HashMap<>();
 
         for (VehicleType type : VehicleType.values()) {

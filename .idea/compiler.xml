@@ -11,5 +11,8 @@
         <module name="LRU_Cache" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Parking-Ticket-System" target="21" />
+    </bytecodeTargetLevel>
   </component>
 </project>
