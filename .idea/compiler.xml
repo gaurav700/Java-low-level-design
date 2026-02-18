@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Parking_Lot_System" />
+        <module name="File-storage-service" />
         <module name="Rate_limiter" />
         <module name="LRU_Cache" />
       </profile>
