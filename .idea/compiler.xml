@@ -10,6 +10,7 @@
         <module name="File-storage-service" />
         <module name="Rate_limiter" />
         <module name="LRU_Cache" />
+        <module name="Ride-sharing-system" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
