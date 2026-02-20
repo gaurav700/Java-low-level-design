@@ -9,6 +9,7 @@
         <module name="Parking_Lot_System" />
         <module name="File-storage-service" />
         <module name="Rate_limiter" />
+        <module name="Food-Delivery_system" />
         <module name="LRU_Cache" />
         <module name="Ride-sharing-system" />
       </profile>
