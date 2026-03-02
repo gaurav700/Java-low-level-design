@@ -18,6 +18,7 @@
         <module name="Food-Delivery_system" />
         <module name="LRU_Cache" />
         <module name="Ride-sharing-system" />
+        <module name="Movie-Ticket_booking_system" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
