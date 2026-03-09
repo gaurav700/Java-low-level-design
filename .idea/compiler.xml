@@ -20,6 +20,7 @@
         <module name="LRU_Cache" />
         <module name="Ride-sharing-system" />
         <module name="SOLID-principles" />
+        <module name="Logger-Framework" />
         <module name="Movie-Ticket_booking_system" />
       </profile>
     </annotationProcessing>

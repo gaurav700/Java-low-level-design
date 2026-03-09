@@ -20,6 +20,8 @@
         <option value="$PROJECT_DIR$/Movie-Ticket_booking_system/pom.xml" />
         <option value="$PROJECT_DIR$/DRY-principle/pom.xml" />
         <option value="$PROJECT_DIR$/KISS-principle/pom.xml" />
+        <option value="$PROJECT_DIR$/Logger-Framework/pom.xml" />
+        <option value="$PROJECT_DIR$/SOLID-principles/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

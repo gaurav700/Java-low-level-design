@@ -1,0 +1,20 @@
+2026-03-09 11:55:54 [main] DEBUG - Main: Debug message
+
+2026-03-09 11:55:54 [main] INFO - Main: Application started
+
+2026-03-09 11:55:54 [main] WARN - Main: Low memory warning
+
+2026-03-09 11:55:54 [main] ERROR - Main: Something went wrong
+
+2026-03-09 11:55:54 [main] FATAL - Main: System crash
+
+2026-03-09 11:58:19 [main] DEBUG - Main: Debug message
+
+2026-03-09 11:58:19 [main] INFO - Main: Application started
+
+2026-03-09 11:58:19 [main] WARN - Main: Low memory warning
+
+2026-03-09 11:58:19 [main] ERROR - Main: Something went wrong
+
+2026-03-09 11:58:19 [main] FATAL - Main: System crash
+
