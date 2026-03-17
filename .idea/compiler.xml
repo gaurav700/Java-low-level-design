@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/Traffic-signal/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -22,10 +25,12 @@
         <module name="SOLID-principles" />
         <module name="Logger-Framework" />
         <module name="Movie-Ticket_booking_system" />
+        <module name="Traffic-signal" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Parking-Ticket-System" target="21" />
+      <module name="Traffic-Signal" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

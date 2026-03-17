@@ -1,11 +1,11 @@
 //package com.pm;
 //
-//import com.pm.entity.Payment;
-//import com.pm.entity.enums.PaymentMethod;
+//import com.pm.com.pm.entity.Payment;
+//import com.pm.com.pm.entity.enums.PaymentMethod;
 //import com.pm.service.PaymentService;
 //import com.pm.service.RefundService;
 //import com.pm.service.WebhookService;
-//import com.pm.entity.PaymentStatusMachine;
+//import com.pm.com.pm.entity.PaymentStatusMachine;
 //
 //public class Main {
 //

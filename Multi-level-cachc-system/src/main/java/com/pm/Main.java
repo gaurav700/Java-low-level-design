@@ -1,8 +1,8 @@
 //package com.pm;
 //
-//import com.pm.entity.Cache;
-//import com.pm.entity.DB;
-//import com.pm.entity.LRUCache;
+//import com.pm.com.pm.entity.Cache;
+//import com.pm.com.pm.entity.DB;
+//import com.pm.com.pm.entity.LRUCache;
 //import com.pm.service.CacheManager;
 //
 //public class Main {

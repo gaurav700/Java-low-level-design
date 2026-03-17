@@ -1,6 +1,6 @@
 //package com.pm;
 //
-//import com.pm.entity.*;
+//import com.pm.com.pm.entity.*;
 //import com.pm.enums.VehicleType;
 //import com.pm.service.ParkingService;
 //import com.pm.service.TicketService;

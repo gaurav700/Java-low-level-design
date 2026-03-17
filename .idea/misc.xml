@@ -22,11 +22,14 @@
         <option value="$PROJECT_DIR$/KISS-principle/pom.xml" />
         <option value="$PROJECT_DIR$/Logger-Framework/pom.xml" />
         <option value="$PROJECT_DIR$/SOLID-principles/pom.xml" />
+        <option value="$PROJECT_DIR$/Traffic-Signal/pom.xml" />
+        <option value="$PROJECT_DIR$/Traffic-signal/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/Parking-Ticket-System/pom.xml" />
+        <option value="$PROJECT_DIR$/Traffic-Signal/pom.xml" />
       </set>
     </option>
   </component>
