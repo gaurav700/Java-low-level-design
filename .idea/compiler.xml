@@ -18,6 +18,7 @@
         <module name="Parking_Lot_System" />
         <module name="Payment-processing-system" />
         <module name="File-storage-service" />
+        <module name="ATM-System" />
         <module name="Rate_limiter" />
         <module name="Food-Delivery_system" />
         <module name="LRU_Cache" />
