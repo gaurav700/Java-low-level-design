@@ -12,6 +12,7 @@
         <module name="DRY-principle" />
         <module name="Splitwise" />
         <module name="Vending-machine" />
+        <module name="Circuit-Breaker" />
         <module name="Libary-management-system" />
         <module name="Multi-level-cachc-system" />
         <module name="Notification-system" />
