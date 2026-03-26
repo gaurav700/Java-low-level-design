@@ -26,6 +26,7 @@
         <option value="$PROJECT_DIR$/Traffic-signal/pom.xml" />
         <option value="$PROJECT_DIR$/ATM-System/pom.xml" />
         <option value="$PROJECT_DIR$/Circuit Breaker/pom.xml" />
+        <option value="$PROJECT_DIR$/Producer-Consumer/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
